@@ -15,7 +15,7 @@
 $accent-color: #395d73;
 $main-color01: #687e8c;
 $main-color02: #a1a6a5;
-$base-color: #f8f9ec;
+$base-color: #f4f5f2;
 $font-color: #706a67;
 $caution-color: #a73b4f;
 
@@ -245,7 +245,7 @@ header {
  ****************************************/
 main {
     > section {
-      background: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.4);
       border-radius: 10px;
       padding: 40px;
       // height: calc(100vh - 200px);
@@ -474,7 +474,19 @@ body.overlay {
       display: block;
       font-size: 50px;
       padding: 10px;
+      animation: fadein 1s ease 0s 1;
     }
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translate(0%, 30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%, 0%);
   }
 }
 
@@ -520,13 +532,22 @@ footer {
     min-width: auto;
     width: 100%;
   }
+  a:link {
+    &.url {
+      font-size: 0.85em;
+      text-decoration: underline;
+    }
+  }
   main {
     padding-left: 2%;
     padding-right:2%;
     box-sizing: border-box;
     > section {
-      padding: 20px;
+      padding: 30px 20px 20px;
       margin-bottom: 50px;
+      h2 {
+        font-size: 1.2em;
+      }
     }
   }
   // 経歴
@@ -580,7 +601,7 @@ footer {
   .skil_box {
     margin-top: 0px;
     li{
-      min-width: 100px;
+      min-width: 105px;
     }
   }
 
