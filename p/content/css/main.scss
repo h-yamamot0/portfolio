@@ -164,11 +164,13 @@ header {
   height: calc(100vh - 84px);
   position: relative;
   h1 {
+    width: 80%;
+    max-width: 360px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    svg {
+    img {
       width: 100%;
     }
   }
