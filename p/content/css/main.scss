@@ -52,7 +52,7 @@ main {
  * 02,wave
  ****************************************/
 .wave {
-  line-height:1;
+  line-height:0;
 }
 .waves {
     height: 40px;
@@ -110,8 +110,8 @@ header {
     display: none;
   }
   &.bg_white {
-    animation: bgcolor 0.5s ease 2s 1 normal forwards;
-    // background-color: #fff;
+    // animation: bgcolor 0.5s ease 2s 1 normal forwards;
+    background: #8fa2af;
     // transition : all 1s 3s;
     nav {
       display: block;
@@ -165,7 +165,7 @@ header {
   position: relative;
   h1 {
     width: 80%;
-    max-width: 360px;
+    max-width: 250px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -353,7 +353,7 @@ div[class^="slid"] {
 
 // モーダル
 body.overlay {
-  overflow: hidden;
+  // overflow: hidden;
   &::before {
     content: "";
     display: block;
@@ -470,9 +470,11 @@ body.overlay {
     text-align: center;
     height: 100px;
     padding-top: 20px;
-    i {
+    img {
       display: block;
-      font-size: 50px;
+      height: 45px;
+      width: auto;
+      margin: auto;
       padding: 10px;
       animation: fadein 1s ease 0s 1;
     }
