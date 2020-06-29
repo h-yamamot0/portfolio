@@ -306,6 +306,9 @@ $timeline-color: #ccc;
 // 一覧部分のキャリア
 .career {
   padding-bottom:40px + 100px;
+  .min_cts {
+    position: relative;
+  }
 }
 div[class^="slid"] {
   position: relative;
@@ -572,9 +575,6 @@ footer {
         dl {
           text-decoration: underline;
         }
-      }
-      .min_cts {
-        position: relative;
       }
     }
   }
