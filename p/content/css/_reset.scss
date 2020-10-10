@@ -101,3 +101,9 @@ hr {
 input, select {
     vertical-align:middle;
 }
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
