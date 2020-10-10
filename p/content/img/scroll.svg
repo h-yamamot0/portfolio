@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="100.5" viewBox="0 0 27 100.5">
+  <g id="グループ_25" data-name="グループ 25" transform="translate(-633 -639)">
+    <g id="グループ_20" data-name="グループ 20" transform="translate(72 98)">
+      <circle id="楕円形_1" data-name="楕円形 1" cx="7.5" cy="7.5" r="7.5" transform="translate(561 541)" fill="#ffd803"/>
+      <line id="線_2" data-name="線 2" y2="100" transform="translate(568.5 541.5)" fill="none" stroke="#ffd803" stroke-width="3"/>
+    </g>
+    <text id="scroll" transform="translate(651 698) rotate(90)" fill="#ffd803" font-size="12" font-family="LetterGothicStd-Bold, Letter Gothic Std" font-weight="700" letter-spacing="0.24em"><tspan x="-28.8" y="0">scroll</tspan></text>
+  </g>
+</svg>
