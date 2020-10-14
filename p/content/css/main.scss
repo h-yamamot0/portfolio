@@ -129,8 +129,9 @@ a, a:link, a:visited {
 	}
 	.skil_set_text {
 		overflow: hidden;
-		height: 3em;
+		max-height: 3em;
 		position: relative;
+		transition: all 1s ease-out 0s;
 		&::after {
 			content: "";
 			display: block;
@@ -147,7 +148,7 @@ a, a:link, a:visited {
 	&.show {
 		.skil_set_text {
 			overflow: auto;
-			height: auto;
+			max-height: 100vh;/*100vhを超えるものは要相談*/
 			&::after {
 				content: none;
 			}
