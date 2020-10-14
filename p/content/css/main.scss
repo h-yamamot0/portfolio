@@ -127,7 +127,7 @@ a, a:link, a:visited {
 			width: auto;
 		}
 	}
-	p {
+	.skil_set_text {
 		overflow: hidden;
 		height: 3em;
 		position: relative;
@@ -143,7 +143,37 @@ a, a:link, a:visited {
 			right: 0;
 		}
 	}
+	// show
+	&.show {
+		.skil_set_text {
+			overflow: auto;
+			height: auto;
+			&::after {
+				content: none;
+			}
+		}
+		.cts_more {
+			display: none;
+		}
+	}
 }
+// more...
+.cts_more {
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: underline;
+	&::after {
+		content: "";
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border: 5px solid transparent;
+		border-top: 8px solid;
+		vertical-align: bottom;
+		margin-left: 5px;
+	}
+}
+
 // img.skill_html, img.skill_css, img.skill_js,  {
 //     height: 50px;
 //     width: auto;
