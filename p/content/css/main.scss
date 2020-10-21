@@ -216,6 +216,15 @@ a, a:link, a:visited {
 				margin-bottom: 5px;
 			}
 		}
+		// show
+		&.show {
+			.career_tool {
+				display: block;
+			}
+			.career_more {
+				display: none;
+			}
+		}
 	}
 }
 .career_read_txt {
@@ -225,6 +234,7 @@ a, a:link, a:visited {
 .career_tool {
 	margin-top: 30px;
 	font-size: 12px;
+	display: none;
 	dt {
 		margin-bottom: 5px;
 	}
@@ -234,6 +244,20 @@ a, a:link, a:visited {
 	}
 }
 
+.career_more {
+	text-decoration: underline;
+	margin-top: 20px;
+	&::after {
+		content: "";
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border: 5px solid transparent;
+		border-top: 8px solid;
+		vertical-align: bottom;
+		margin-left: 5px;
+	}
+}
 // works
 .works {
 	background: $base-color03;
