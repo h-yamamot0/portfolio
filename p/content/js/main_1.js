@@ -18,4 +18,28 @@ $('.js_career_more').click(function(){
 
 });
 
+// nav
+var flag = true;
+$('.js_nav_open').click(function(){
+	if(flag) {
+		$(this).closest('.main_nav').removeClass('close');
+		flag = false;
+	} else {
+		$(this).closest('.main_nav').addClass('close');
+		flag = true;
+	}
+});
+
+// scrpll
+var h = $('header').height();
+$(window).on('load scroll', function(){
+	if ($(window).scrollTop() > h) {
+		$('.js_nav_open').fadeIn(100);
+	} else {
+		$('.js_nav_open').fadeOut(100);
+		$('.main_nav').addClass('close');
+		flag = true;
+	}
+});
+
 });
