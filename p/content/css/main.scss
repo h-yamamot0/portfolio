@@ -7,7 +7,7 @@
  * 03,main
  * 04,footer
  * 05,main_nav
- * 06,
+ * 06,PC
  ****************************************/
 
  /****************************************
@@ -93,8 +93,12 @@ a, a:link, a:visited {
  /****************************************
  * 03,main
  ****************************************/
+article > section {
+	min-height: 100vh;
+}
 .main_cts {
 	padding: 60px 10%;
+	margin: auto;
 	h1 {
 		text-align: center;
 		margin-bottom: 60px;
@@ -323,7 +327,8 @@ a, a:link, a:visited {
 
 // about
 .about {
-	min-height: calc(100vh - 120px - 25px);
+	min-height: calc(100vh - 25px);
+	box-sizing: border-box;
 }
 .about_cts {
 	font-style: normal;
@@ -468,4 +473,82 @@ footer {
 			}
 		}
 	}
+}
+
+
+ /****************************************
+ * 06,PC
+ ****************************************/
+@media (min-width: 835px) {
+
+	// header
+	.header_nav {
+		max-width: 1000px;
+		margin: auto;
+		ul {
+			font-size: 0px;
+			margin: 60px 0px 0px;
+			li {
+				font-size: 18px;
+				display: inline-block;
+				margin: 0px 25px;
+			}
+		}
+	}
+
+	// main_cts
+	.main_cts {
+		max-width: 1000px;
+		padding: 100px 20px;
+		*{
+			box-sizing: border-box;
+		}
+	}
+	// skill
+	.skill_set {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: center;
+		li {
+			width: 250px;
+			margin: 0px;
+			padding: 0px 20px 60px;
+		}
+	}
+	.skill_set_cts {
+		.skil_set_text {
+			overflow: auto;
+			max-height: inherit;
+			&::after {
+				display: none;
+			}
+		}
+	}
+	.cts_more {
+		display: none;
+	}
+
+	// career
+	.career_text {
+		width: 600px;
+		margin: auto;
+	}
+	.career_flow {
+		width: 650px;
+		margin: 100px auto 0px;
+	}
+
+	// works
+	.works_cts_list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		.works_cts_detail {
+			margin: 25px;
+			max-width: 250px;
+		}
+	}
+
 }
