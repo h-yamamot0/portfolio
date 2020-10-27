@@ -22,7 +22,7 @@ $accent-color: #FFD803;
 $caution-color: #e53170;
 
 html {
-	scroll-behavior: smooth;
+	// scroll-behavior: smooth;
 }
 body {
 	font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
@@ -43,6 +43,7 @@ body {
 a, a:link, a:visited {
 	color: $accent-color;
 	text-decoration: underline;
+	// -webkit-tap-highlight-color: rgba(#fff, 0);
 }
 
  /****************************************
@@ -484,6 +485,9 @@ footer {
 			border-right: 0px;
 			&:last-of-type {
 				border-right: 1px solid $base-color03;
+			}
+			&.link_now {
+				background: $base-color03;
 			}
 			a {
 				display: block;
