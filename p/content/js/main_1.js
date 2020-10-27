@@ -33,12 +33,18 @@ $('.js_nav_open').click(function(){
 // scrpll
 var h = $('header').height();
 $(window).on('load scroll', function(){
+	// if ($(window).scrollTop() >= h) {
+	// 	$('.js_nav_open').fadeIn(100);
+	// } else {
+	// 	$('.js_nav_open').fadeOut(100);
+	// 	$('.main_nav').addClass('close');
+	// 	flag = true;
+	// }
+
 	if ($(window).scrollTop() >= h) {
-		$('.js_nav_open').fadeIn(100);
+		$('.main_nav').fadeIn(100);
 	} else {
-		$('.js_nav_open').fadeOut(100);
-		$('.main_nav').addClass('close');
-		flag = true;
+		$('.main_nav').fadeOut(100);
 	}
 });
 
