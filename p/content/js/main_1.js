@@ -44,6 +44,13 @@ $(function (){
 		boxTop[i] = $(this).offset().top;
 	});
 
+	// $(window).resize(function(){
+	// 	$('.main_cts').each(function(i) {
+	// 		boxTop[i] = $(this).offset().top;
+	// 	});
+	// 	console.log('resize');
+	// });
+
 	changeBox(0);
 
 	// スクロール時の表示

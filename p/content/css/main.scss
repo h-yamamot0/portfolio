@@ -474,6 +474,7 @@ footer {
     right: 0;
 	margin: auto;
 	z-index: 10;
+	box-shadow: 0 0 5px #ccc;
 	ul {
 		display: table;
 		width: 100%;
@@ -498,6 +499,7 @@ footer {
 				text-decoration: none;
 				color: $font-color;
 				font-size: 12px;
+				// font-weight: bold;
 			}
 		}
 	}
