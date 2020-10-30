@@ -351,19 +351,22 @@ article > section {
 	&:first-of-type {
 		margin-top: 0px;
 	}
-	& + dd {
-		margin-top: 10px;
-		a {
-			color: $font-color;
-			&:visited {
-				color: $font-color;
-			}
-		}
-	}
+	// & + dd {
+	// 	margin-top: 20px;
+	// }
 	&::after {
 		content: ":";
 		display: inline-block;
 		margin-left: 5px;
+	}
+}
+.about_add_txt {
+	margin-top: 10px;
+	a {
+		color: $font-color;
+		&:visited {
+			color: $font-color;
+		}
 	}
 }
  /****************************************
