@@ -22,9 +22,9 @@ $stroke-color: #272343;
 $accent-color: #FFD803;
 $caution-color: #e53170;
 
-html {
-	// scroll-behavior: smooth;
-}
+// html {
+// 	scroll-behavior: smooth;
+// }
 body {
 	font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	font-size: 14px;
@@ -230,12 +230,12 @@ article > section {
 				opacity: 1;
 				max-height: 100vh;
 				// overflow: hidden;
-				dt {
-					// display: block;
-				}
-				dd {
-					// display: block;
-				}
+				// dt {
+				// 	display: block;
+				// }
+				// dd {
+				// 	display: block;
+				// }
 			}
 			.career_more {
 				display: none;
