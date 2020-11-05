@@ -26,13 +26,13 @@ $caution-color: #e53170;
 // 	scroll-behavior: smooth;
 // }
 body {
-	font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	font-size: 14px;
-	color: $font-color;
-	line-height: 1.5;
-	letter-spacing: 0.1em;
 	background: $base-color;
 	box-sizing: border-box;
+	color: $font-color;
+	font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 14px;
+	letter-spacing: 0.1em;
+	line-height: 1.5;
 	width: 100%;
   //   overflow-y: scroll;
   //   -ms-overflow-style: none;
@@ -43,24 +43,24 @@ body {
 }
 a, a:link, a:visited {
 	color: $accent-color;
-	text-decoration: underline;
 	-webkit-tap-highlight-color: rgba(#fff, 0);
+	text-decoration: underline;
 }
 
  /****************************************
  * 02,header
  ****************************************/
  header {
-	width: 100%;
-	height: 100vh;
 	background: $stroke-color;
+	height: 100vh;
 	position: relative;
+	width: 100%;
 }
 .header_nav {
 	ul {
-		text-align: right;
 		float: right;
 		margin: 40px 10% 0px 0px;
+		text-align: right;
 		li {
 			color: $base-color;
 			font-size: 18px;
@@ -80,12 +80,12 @@ a, a:link, a:visited {
 	}
 }
 .header_scroll {
-	text-align: center;
-	position: absolute;
 	bottom: 0;
 	left: 0;
-	right: 0;
 	margin: auto auto 40px;
+	position: absolute;
+	right: 0;
+	text-align: center;
 	img {
 		height: 100px;
 		width: auto;
@@ -99,15 +99,15 @@ article > section {
 	min-height: 100vh;
 }
 .main_cts {
-	padding: 100px 10% 60px;
 	margin: auto;
+	padding: 100px 10% 60px;
 	h1 {
-		text-align: center;
 		margin-bottom: 60px;
+		text-align: center;
 		img {
 			height: 22px;
-			width: auto;
 			vertical-align: bottom;
+			width: auto;
 		}
 	}
 }
@@ -124,37 +124,37 @@ article > section {
 	h2 {
 		font-size: 18px;
 		font-weight: normal;
-		text-align: center;
 		margin-bottom: 20px;
+		text-align: center;
 		img {
 			display: block;
-			margin: 0px auto 20px;
 			height: 50px;
+			margin: 0px auto 20px;
 			width: auto;
 		}
 	}
 	.skil_set_text {
-		overflow: hidden;
 		max-height: 3em;
+		overflow: hidden;
 		position: relative;
 		transition: all 1s ease-out 0s;
 		&::after {
+			background: linear-gradient(rgba(#fff, 0) 0%, rgba(#FFFFFE, 1) 70%);
+			bottom: 0;
 			content: "";
 			display: block;
-			width: 100%;
 			height: 2em;
-			background: linear-gradient(rgba(#fff, 0) 0%, rgba(#FFFFFE, 1) 70%);
-			position: absolute;
-			bottom: 0;
 			left: 0;
+			position: absolute;
 			right: 0;
+			width: 100%;
 		}
 	}
 	// show
 	&.show {
 		.skil_set_text {
-			overflow: auto;
 			max-height: 100vh;/*100vhを超えるものは要相談*/
+			overflow: auto;
 			&::after {
 				content: none;
 			}
@@ -167,17 +167,17 @@ article > section {
 // more...
 .cts_more {
 	text-align: center;
-	vertical-align: middle;
 	text-decoration: underline;
+	vertical-align: middle;
 	&::after {
-		content: "";
-		display: inline-block;
-		width: 0;
-		height: 0;
 		border: 5px solid transparent;
 		border-top: 8px solid;
-		vertical-align: bottom;
+		content: "";
+		display: inline-block;
+		height: 0;
 		margin-left: 5px;
+		vertical-align: bottom;
+		width: 0;
 	}
 }
 
@@ -194,28 +194,28 @@ article > section {
 	margin-top: 20px;
 }
 .career_flow {
+	border-left: 3px solid $font-color;
+	list-style: none;
 	margin: 60px 0px 0px -5%;
 	padding: 0px 0px 0px 30px;
-	list-style: none;
-	border-left: 3px solid $font-color;
 	.career_detail {
 		margin-top: 60px;
 		&:first-of-type {
 			margin-top: 0px;
 		}
 		h2 {
-			font-weight: normal;
 			font-size: 16px;
+			font-weight: normal;
 			position: relative;
 			&::before {
+				background: $font-color;
 				content: "";
 				display: block;
-				width: 15px;
 				height: 15px;
-				background: $font-color;
+				left: calc(-30px + -9px);
 				position: absolute;
 				top: 5px;
-				left: calc(-30px + -9px);
+				width: 15px;
 			}
 			.career_date {
 				display: block;
@@ -227,8 +227,8 @@ article > section {
 			.career_tool {
 				// display: block;
 				margin-top: 30px;
-				opacity: 1;
 				max-height: 100vh;
+				opacity: 1;
 				// overflow: hidden;
 				// dt {
 				// 	display: block;
@@ -244,18 +244,18 @@ article > section {
 	}
 }
 .career_read_txt {
-	margin-top: 20px;
 	font-size: 12px;
+	margin-top: 20px;
 }
 .career_tool {
+	font-size: 12px;
 	// margin-top: 30px;
 	margin-top: 0px;
-	font-size: 12px;
+	max-height: 0px;
 	// display: none;
 	opacity: 0;
-	max-height: 0px;
-	transition: all 1s ease-out 0s;
 	overflow: hidden;
+	transition: all 1s ease-out 0s;
 	dt {
 		margin-bottom: 5px;
 		// display: none;
@@ -268,17 +268,17 @@ article > section {
 }
 
 .career_more {
-	text-decoration: underline;
 	margin-top: 20px;
+	text-decoration: underline;
 	&::after {
-		content: "";
-		display: inline-block;
-		width: 0;
-		height: 0;
 		border: 5px solid transparent;
 		border-top: 8px solid;
-		vertical-align: bottom;
+		content: "";
+		display: inline-block;
+		height: 0;
 		margin-left: 5px;
+		vertical-align: bottom;
+		width: 0;
 	}
 }
 // works
@@ -286,51 +286,51 @@ article > section {
 	background: $base-color03;
 }
 .works_cts_detail {
-	width: 100%;
-	max-width: 200px;
 	margin: 60px auto 0px;
+	max-width: 200px;
+	width: 100%;
 	&:first-of-type {
 		margin-top: 0px;
 	}
 }
 .works_tst {
-	width: 100%;
-	padding-top: 100%;
-	position: relative;
 	background: $font-color;
 	overflow: hidden;
+	padding-top: 100%;
+	position: relative;
+	width: 100%;
 	img {
-		position: absolute;
-		display: block;
-		top: -10%;
 		bottom: 0px;
-		left: 0px;
-		right: 0px;
-		margin: auto;
-		width: 40%;
+		display: block;
 		height: auto;
+		left: 0px;
+		margin: auto;
+		position: absolute;
+		right: 0px;
+		top: -10%;
+		width: 40%;
 	}
 	.works_caption {
 		background: $base-color;
-		opacity: 50%;
-		position: absolute;
 		bottom: 0px;
 		left: 0px;
+		opacity: 50%;
+		padding: 10px;
+		position: absolute;
 		right: 0px;
 		text-align: center;
-		padding: 10px;
 	}
 }
 .works_more {
+	margin-top: 40px;
 	text-align: right;
 	text-decoration: underline;
-	margin-top: 40px;
 }
 
 // about
 .about {
-	min-height: calc(100vh - 25px);
 	box-sizing: border-box;
+	min-height: calc(100vh - 25px);
 }
 .about_cts {
 	font-style: normal;
@@ -341,9 +341,9 @@ article > section {
 	}
 }
 .about_address {
-	margin-top: 40px;
 	// font-size: 16px;
 	display: inline-block;
+	margin-top: 40px;
 	text-align: left;
 }
 .about_add_title {
@@ -361,7 +361,7 @@ article > section {
 	}
 }
 .about_add_txt {
-	margin-top: 10px;
+	margin-top: 20px;
 	a {
 		color: $font-color;
 		&:visited {
@@ -377,8 +377,8 @@ footer {
 	.copyright {
 		color: $base-color;
 		font-size: 10px;
-		text-align: center;
 		padding: 5px 0px;
+		text-align: center;
 	}
 }
 /****************************************
@@ -472,22 +472,22 @@ footer {
 
 // main_nav 2パターン
 .main_nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-	margin: auto;
-	z-index: 10;
 	box-shadow: 0 0 5px #ccc;
+    left: 0;
+	margin: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+	z-index: 10;
 	ul {
+		background: $base-color;
 		display: table;
 		width: 100%;
-		background: $base-color;
 		li {
-			display: table-cell;
-			width: 25%;
 			border: 1px solid $base-color03;
 			border-right: 0px;
+			display: table-cell;
+			width: 25%;
 			&:last-of-type {
 				border-right: 1px solid $base-color03;
 			}
@@ -495,14 +495,14 @@ footer {
 				background: $base-color03;
 			}
 			a {
-				display: block;
-				width: 100%;
-				height: 100%;
-				text-align: center;
-				padding: 20px 0px;
-				text-decoration: none;
 				color: $font-color;
+				display: block;
 				font-size: 12px;
+				height: 100%;
+				padding: 20px 0px;
+				text-align: center;
+				text-decoration: none;
+				width: 100%;
 				// font-weight: bold;
 			}
 		}
@@ -512,39 +512,39 @@ footer {
  * 06,loading
  ****************************************/
 .js_load {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
 	background: $stroke-color;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
 	z-index: 20;
 	.js_load_cont {
-		position: absolute;
-		top: 0;
 		bottom: 0;
-		left: 0;
-		right: 0;
-		width: 100px;
 		height: 100px;
+		left: 0;
 		margin: auto;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100px;
 		.load_box {
+			height: 100%;
 			position: relative;
 			width: 100%;
-			height: 100%;
 			div {
-				width: 50px;
+				bottom: 0;
 				height: 50px;
+				left: 0;
+				margin: auto;
 				// border-radius: 50%;
 				// border: 3px solid $accent-color;
 				position: absolute;
-				top: 0;
-				bottom: 0;
 				right: 0;
-				left: 0;
-				margin: auto;
+				top: 0;
+				width: 50px;
 				// animation: load 1s ease-in-out 0s infinite normal;
 			// 	&::before {
 			// 		content: "";
@@ -557,8 +557,8 @@ footer {
 			// 		right: -5px;
 			// 	}
 				svg {
-					width: 100%;
 					height: 100%;
+					width: 100%;
 				}
 			}
 			.cls-1 {
@@ -627,14 +627,14 @@ footer {
 
 	// header
 	.header_nav {
-		max-width: 1000px;
 		margin: auto;
+		max-width: 1000px;
 		ul {
 			font-size: 0px;
 			margin: 60px 0px 0px;
 			li {
-				font-size: 18px;
 				display: inline-block;
+				font-size: 18px;
 				margin: 0px 25px;
 			}
 		}
@@ -643,7 +643,7 @@ footer {
 	// main_cts
 	.main_cts {
 		max-width: 1000px;
-		padding: 100px 20px;
+		padding: 150px 20px 100px;
 		*{
 			box-sizing: border-box;
 		}
@@ -656,14 +656,14 @@ footer {
 	}
 	// skill
 	.skill_set {
+		align-items: flex-start;
 		display: flex;
 		flex-wrap: wrap;
-		align-items: flex-start;
 		justify-content: center;
 		li {
-			width: 300px;
 			margin: 0px;
 			padding: 0px 20px 60px;
+			width: 300px;
 		}
 	}
 	.skill_set_cts {
@@ -673,8 +673,8 @@ footer {
 			}
 		}
 		.skil_set_text {
-			overflow: auto;
 			max-height: inherit;
+			overflow: auto;
 			&::after {
 				display: none;
 			}
@@ -686,23 +686,49 @@ footer {
 
 	// career
 	.career_text {
-		width: 600px;
 		margin: auto;
+		width: 600px;
 	}
 	.career_flow {
-		width: 650px;
 		margin: 100px auto 0px;
+		width: 650px;
 	}
 
 	// works
 	.works_cts_list {
-		display: flex;
-		justify-content: center;
 		align-items: center;
+		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 		.works_cts_detail {
 			margin: 25px;
 			max-width: 250px;
+		}
+	}
+
+	// nav
+	.main_nav {
+		ul {
+			box-sizing: border-box;
+			padding: 0px 10%;
+			width: 100%;
+			li {
+				border: none;
+				&:last-of-type {
+					border-right: none;
+				}
+				&.link_now {
+					background: transparent;
+					border-bottom: 5px solid #BAE8E8;
+				}
+				&:hover {
+					background: #BAE8E8;
+				}
+				a {
+					font-size: 14px;
+					padding-bottom: 10px;
+				}
+			}
 		}
 	}
 
