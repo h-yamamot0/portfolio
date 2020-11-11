@@ -4,55 +4,27 @@
 /****************************************
  * 01,common
  * 02,header
- * 03,main
- * 04,footer
+ * 03,footer
+ * 04,main
  * 05,main_nav
  * 06,loading
- * 07,PC
+ * 07,complete
+ * 08,PC
  ****************************************/
 
  /****************************************
  * 01,common
  ****************************************/
-$base-color: #FFFFFE;
-$base-color02: #E3F6F5;
-$base-color03: #BAE8E8;
-$font-color: #2D334A;
-$stroke-color: #272343;
-$accent-color: #FFD803;
-$caution-color: #e53170;
-
-// html {
-// 	scroll-behavior: smooth;
-// }
-body {
-	background: $base-color;
-	box-sizing: border-box;
-	color: $font-color;
-	font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	font-size: 14px;
-	letter-spacing: 0.1em;
-	line-height: 1.5;
-	width: 100%;
-  //   overflow-y: scroll;
-  //   -ms-overflow-style: none;
-  //   scrollbar-width: none;
-  //   &::-webkit-scrollbar {
-  //     display:none;
-  // }
-}
-a, a:link, a:visited {
-	color: $accent-color;
-	-webkit-tap-highlight-color: rgba(#fff, 0);
-	text-decoration: underline;
-}
+ @import 'common';
 
  /****************************************
  * 02,header
  ****************************************/
  header {
 	background: $stroke-color;
-	height: 100vh;
+    box-sizing: border-box;
+	min-height: 100vh;
+	padding: 0px 0px 60px;
 	position: relative;
 	width: 100%;
 }
@@ -92,9 +64,22 @@ a, a:link, a:visited {
 	}
 }
 
- /****************************************
- * 03,main
- ****************************************/
+/****************************************
+ * 03,footer
+****************************************/
+ footer {
+	background: $font-color;
+	.copyright {
+		color: $base-color;
+		font-size: 10px;
+		padding: 5px 0px;
+		text-align: center;
+	}
+}
+
+/****************************************
+ * 04,main
+****************************************/
 article > section {
 	min-height: 100vh;
 }
@@ -112,10 +97,6 @@ article > section {
 	}
 }
 // skill
-// .skill {
-
-
-// }
 .skill_set_cts {
 	margin:60px 0px 0px;
 	&:first-of-type {
@@ -181,11 +162,6 @@ article > section {
 	}
 }
 
-// img.skill_html, img.skill_css, img.skill_js,  {
-//     height: 50px;
-//     width: auto;
-// }
-
 // career
 .career {
 	background: $base-color02;
@@ -225,17 +201,9 @@ article > section {
 		// show
 		&.show {
 			.career_tool {
-				// display: block;
 				margin-top: 30px;
 				max-height: 100vh;
 				opacity: 1;
-				// overflow: hidden;
-				// dt {
-				// 	display: block;
-				// }
-				// dd {
-				// 	display: block;
-				// }
 			}
 			.career_more {
 				display: none;
@@ -281,6 +249,7 @@ article > section {
 		width: 0;
 	}
 }
+
 // works
 .works {
 	background: $base-color03;
@@ -330,7 +299,7 @@ article > section {
 // about
 .about {
 	box-sizing: border-box;
-	min-height: calc(100vh - 25px);
+	// min-height: calc(100vh - 25px);
 }
 .about_cts {
 	font-style: normal;
@@ -351,9 +320,6 @@ article > section {
 	&:first-of-type {
 		margin-top: 0px;
 	}
-	// & + dd {
-	// 	margin-top: 20px;
-	// }
 	&::after {
 		content: ":";
 		display: inline-block;
@@ -369,18 +335,56 @@ article > section {
 		}
 	}
 }
- /****************************************
- * 04,footer
- ****************************************/
-footer {
-	background: $font-color;
-	.copyright {
+
+// contact
+.contact {
+	background: $stroke-color;
+	box-sizing: border-box;
+	min-height: calc(100vh - 25px);
+}
+.contact_form {
+	.form_title {
 		color: $base-color;
-		font-size: 10px;
-		padding: 5px 0px;
-		text-align: center;
+		margin-bottom: 10px;
+	}
+	.form_input {
+		margin-bottom: 20px;
+		input,textarea {
+			background: $base-color;
+			border: 1px solid $base-color02;
+			border-radius: 5px;
+			color: $font-color;
+			font-size: 16px;
+			padding: 10px 5px;
+			width: 100%;
+			&::placeholder {
+				color: #ccc;
+			}
+		}
+		textarea {
+			height: 150px;
+			resize: none;
+		}
+	}
+	button {
+		&[type="submit"] {
+			background: $accent-color;
+			border-radius: 50px;
+			box-shadow: 0px 5px 0 #AF8F04;
+			color: $font-color;
+			display: block;
+			font-size: 14px;
+			margin: 10px auto 0px;
+			padding: 10px 0px;
+			width: 100px;
+			&:active {
+				box-shadow: none;
+				transform: translatey(5px);
+			}
+		}
 	}
 }
+
 /****************************************
  * 05,main_nav
  ****************************************/
@@ -473,11 +477,11 @@ footer {
 // main_nav 2パターン
 .main_nav {
 	box-shadow: 0 0 5px #ccc;
-    left: 0;
+	left: 0;
 	margin: auto;
-    position: fixed;
-    right: 0;
-    top: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
 	z-index: 10;
 	ul {
 		background: $base-color;
@@ -487,7 +491,8 @@ footer {
 			border: 1px solid $base-color03;
 			border-right: 0px;
 			display: table-cell;
-			width: 25%;
+			vertical-align: middle;
+			width: 20%;
 			&:last-of-type {
 				border-right: 1px solid $base-color03;
 			}
@@ -504,6 +509,9 @@ footer {
 				text-decoration: none;
 				width: 100%;
 				// font-weight: bold;
+				&[href="#contact"] {
+					font-size: 10px;
+				}
 			}
 		}
 	}
@@ -539,30 +547,14 @@ footer {
 				height: 50px;
 				left: 0;
 				margin: auto;
-				// border-radius: 50%;
-				// border: 3px solid $accent-color;
 				position: absolute;
 				right: 0;
 				top: 0;
 				width: 50px;
-				// animation: load 1s ease-in-out 0s infinite normal;
-			// 	&::before {
-			// 		content: "";
-			// 		display: block;
-			// 		width: 20px;
-			// 		height: 20px;
-			// 		background: $stroke-color;
-			// 		position: absolute;
-			// 		top: -3px;
-			// 		right: -5px;
-			// 	}
 				svg {
 					height: 100%;
 					width: 100%;
 				}
-			}
-			.cls-1 {
-				fill: #e8c533;
 			}
 		}
 		.load_text {
@@ -571,6 +563,12 @@ footer {
 		}
 	}
 }
+#sumile {
+	.cls-1 {
+		fill: #e8c533;
+	}
+}
+
 #s_01 {
 	animation: smile01 1s ease-in-out 0s infinite normal;
 }
@@ -620,116 +618,71 @@ footer {
 		opacity: 1;
 	}
 }
- /****************************************
- * 07,PC
- ****************************************/
-@media (min-width: 835px) {
 
-	// header
-	.header_nav {
-		margin: auto;
-		max-width: 1000px;
-		ul {
-			font-size: 0px;
-			margin: 60px 0px 0px;
-			li {
-				display: inline-block;
-				font-size: 18px;
-				margin: 0px 25px;
-			}
-		}
-	}
+/****************************************
+* 07,complete
+****************************************/
 
-	// main_cts
-	.main_cts {
-		max-width: 1000px;
-		padding: 150px 20px 100px;
-		*{
-			box-sizing: border-box;
-		}
-		h1 {
-			margin-bottom: 100px;
-			img {
-				height: 32px;
-			}
-		}
-	}
-	// skill
-	.skill_set {
-		align-items: flex-start;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		li {
-			margin: 0px;
-			padding: 0px 20px 60px;
-			width: 300px;
-		}
-	}
-	.skill_set_cts {
-		h2 {
-			img {
-				height: 90px;
-			}
-		}
-		.skil_set_text {
-			max-height: inherit;
-			overflow: auto;
-			&::after {
-				display: none;
-			}
-		}
-	}
-	.cts_more {
-		display: none;
-	}
-
-	// career
-	.career_text {
-		margin: auto;
-		width: 600px;
-	}
-	.career_flow {
-		margin: 100px auto 0px;
-		width: 650px;
-	}
-
-	// works
-	.works_cts_list {
-		align-items: center;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		.works_cts_detail {
-			margin: 25px;
-			max-width: 250px;
-		}
-	}
-
-	// nav
-	.main_nav {
-		ul {
-			box-sizing: border-box;
-			padding: 0px 10%;
-			width: 100%;
-			li {
-				border: none;
-				&:last-of-type {
-					border-right: none;
-				}
-				&.link_now {
-					background: transparent;
-					border-bottom: 5px solid #BAE8E8;
-				}
-				&:hover {
-					background: #BAE8E8;
-				}
-				a {
-					font-size: 14px;
-					padding-bottom: 10px;
+.complete {
+	background: $stroke-color;
+	box-sizing: border-box;
+	min-height: calc(100vh - 25px);
+	padding-bottom: 60px;
+}
+.complete_box {
+	height: calc(100vh - 200px);
+	min-height: 300px;
+	position: relative;
+	width: 100%;
+	.comp_message {
+		height: 0px;
+		left: 50%;
+		position: absolute;
+		text-align: center;
+		top: 55%;
+		transform: translate(-50%, -50%);
+		.comp_img {
+			div {
+				height: 50px;
+				margin: auto;
+				width: 50px;
+				svg {
+					height: 100%;
+					width: 100%;
 				}
 			}
+		}
+		.comp_text {
+			color: $accent-color;
+			font-size: 14px;
+			margin-top: 25px;
 		}
 	}
 
 }
+.comp_button {
+	a {
+		background: $accent-color;
+		border-radius: 50px;
+		box-shadow: 0px 5px 0 #AF8F04;
+		display: block;
+		margin: 30px auto 0px;
+		padding: 10px 0px;
+		text-align: center;
+		width: 100px;
+		img {
+			height: 14px;
+			vertical-align: middle;
+			width: auto;
+		}
+		&:active {
+			box-shadow: none;
+			transform: translatey(5px);
+		}
+	}
+}
+
+/****************************************
+ * 08,PC
+****************************************/
+@import 'pc';

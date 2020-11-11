@@ -30,6 +30,7 @@
 				<li><a href="#career">CAREER</a></li>
 				<li><a href="#works">WORKS</a></li>
 				<li><a href="#about">ABOUT</a></li>
+				<li><a href="#contact">CONTACT</a></li>
 			</ul>
 		</nav>
 		<div class="header_scroll">
@@ -46,6 +47,7 @@
 				<li><a href="#career">CAREER</a></li>
 				<li><a href="#works">WORKS</a></li>
 				<li><a href="#about">ABOUT</a></li>
+				<li><a href="#contact">CONTACT</a></li>
 			</ul>
 		</nav>
 		<article>
@@ -316,13 +318,44 @@
 							H.yamamoto
 						</p>
 						<dl class="about_address">
-							<!-- <dt class="about_add_title">Email</dt> -->
-							<!-- <dd class="about_add_txt">h.yamamoto.324@gmail.com</dd class="about_add_title"> -->
 							<dt class="about_add_title">URL</dt>
 							<dd class="about_add_txt"><a href="https://github.com/h-yamamot0">https://github.com/h-yamamot0</a></dd>
 							<dd class="about_add_txt"><a href="https://nekonekotomat0.tumblr.com/">Daily UI Challenge</a></dd>
 						</dl>
 					</address>
+				</div>
+			</section>
+			<section id="contact" class="contact">
+				<div class="main_cts">
+					<h1>
+						<img src="content/img/contact.svg" alt="contact" width="218" height="30">
+					</h1>
+					<form class="contact_form" action="https://api.staticforms.xyz/submit" method="post">
+						<input type="text" name="honeypot" style="display:none">
+						<input type="hidden" name="accessKey" value="1d58f99a-bb5c-44d7-ba60-1477f5cb8530">
+						<input type="hidden" name="subject" value="お問い合わせ">
+						<!-- <input type="hidden" name="replyTo" value="返信先アドレス"> -->
+						<input type="hidden" name="redirectTo" value="https://h-yamamot0.github.io/portfolio/p/complete.html">
+						<dl class="contact_form_area">
+
+							<!-- <dt class="form_title">お問い合わせ内容</dt>
+							<dd class="form_input">
+								<select name="subject" required>
+									<option hidden>選択してください</option>
+									<option value="お問い合わせ">お問い合わせ</option>
+									<option value="test">テスト</option>
+								</select>
+							</dd> -->
+
+							<dt class="form_title">お名前</dt>
+							<dd class="form_input"><input type="text" name="name" placeholder="Your Name" required></dd>
+							<dt class="form_title">E-mail</dt>
+							<dd class="form_input"><input type="email" name="email" placeholder="Your Email" required></dd>
+							<dt class="form_title">お問い合わせ内容</dt>
+							<dd class="form_input"><textarea name="message" required></textarea></dd>
+						</dl>
+						<button type="submit">送信</button>
+					</form>
 				</div>
 			</section>
 		</article>

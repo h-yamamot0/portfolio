@@ -19,13 +19,13 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
-	margin:0;
-	padding:0;
-	border:0;
-	outline:0;
-	font-size:100%;
-	vertical-align:baseline;
 	background:transparent;
+	border:0;
+	font-size:100%;
+	margin:0;
+	outline:0;
+	padding:0;
+	vertical-align:baseline;
 }
 
 body {
@@ -52,11 +52,11 @@ q:before, q:after {
 }
 
 a {
+	background:transparent;
+	font-size:100%;
 	margin:0;
 	padding:0;
-	font-size:100%;
 	vertical-align:baseline;
-	background:transparent;
 }
 
 /* change colours to suit your needs */
@@ -90,20 +90,33 @@ table {
 
 /* change border colour to suit your needs */
 hr {
+	border:0;    border-top:1px solid #cccccc;
 	display:block;
 	height:1px;
-	border:0;  
-	border-top:1px solid #cccccc;
 	margin:1em 0;
 	padding:0;
-}
+	}
 
 input, select {
 	vertical-align:middle;
 }
 
-.clearfix::after {
-	content: "";
-	display: block;
-	clear: both;
-  }
+input,textarea,select,button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: transparent;
+	border: none;
+	box-sizing: border-box;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+}
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+	display: none;
+}
+input[type="submit"]::focus,
+input[type="button"]::focus {
+	outline-offset: -2px;
+}
