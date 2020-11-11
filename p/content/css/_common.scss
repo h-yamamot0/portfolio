@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/****************************************
+ * 01,common
+****************************************/
+
+$base-color: #FFFFFE;
+$base-color02: #E3F6F5;
+$base-color03: #BAE8E8;
+$font-color: #2D334A;
+$stroke-color: #272343;
+$accent-color: #FFD803;
+$caution-color: #e53170;
+
+body {
+	background: $base-color;
+	box-sizing: border-box;
+	color: $font-color;
+	font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 14px;
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+	width: 100%;
+}
+a, a:link, a:visited {
+	color: $accent-color;
+	-webkit-tap-highlight-color: rgba(#fff, 0);
+	text-decoration: underline;
+}
+
+.clearfix::after {
+	clear: both;
+	content: "";
+	display: block;
+}

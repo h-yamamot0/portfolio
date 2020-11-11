@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+/****************************************
+ * 07,PC
+****************************************/
+@media (min-width: 835px) {
+
+	// header
+	.header_nav {
+		margin: auto;
+		max-width: 1000px;
+		ul {
+			font-size: 0px;
+			margin: 60px 0px 0px;
+			li {
+				display: inline-block;
+				font-size: 18px;
+				margin: 0px 25px;
+			}
+		}
+	}
+
+	// main_cts
+	.main_cts {
+		max-width: 1000px;
+		padding: 150px 20px 100px;
+		*{
+			box-sizing: border-box;
+		}
+		h1 {
+			margin-bottom: 100px;
+			img {
+				height: 32px;
+			}
+		}
+	}
+	// skill
+	.skill_set {
+		align-items: flex-start;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		li {
+			margin: 0px;
+			padding: 0px 20px 60px;
+			width: 300px;
+		}
+	}
+	.skill_set_cts {
+		h2 {
+			img {
+				height: 90px;
+			}
+		}
+		.skil_set_text {
+			max-height: inherit;
+			overflow: auto;
+			&::after {
+				display: none;
+			}
+		}
+	}
+	.cts_more {
+		display: none;
+	}
+
+	// career
+	.career_text {
+		margin: auto;
+		width: 600px;
+	}
+	.career_flow {
+		margin: 100px auto 0px;
+		width: 650px;
+	}
+
+	// works
+	.works_cts_list {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		.works_cts_detail {
+			margin: 25px;
+			max-width: 250px;
+		}
+	}
+
+	// contact
+	.contact_form {
+		margin: auto;
+		max-width: 600px;
+		button {
+			&[type="submit"] {
+				margin: 40px auto 0px;
+				width: 150px;
+			}
+			&:hover {
+				background: #ffea75;
+				box-shadow: 0px 5px 0 #c3ab43;
+			}
+		}
+	}
+	.contact_form_area {
+		letter-spacing: -.4em;
+		.form_title {
+			box-sizing: border-box;
+			display: inline-block;
+			letter-spacing: normal;
+			padding-right: 20px;
+			vertical-align: middle;
+			width: 30%;
+			&:last-of-type {
+				padding-top: 10px;
+				vertical-align: top;
+			}
+		}
+		.form_input {
+			display: inline-block;
+			letter-spacing: normal;
+			vertical-align: middle;
+			width: 70%;
+			input,textarea {
+				font-size: initial;
+				padding: 10px;
+			}
+			textarea {
+				resize: vertical;
+			}
+		}
+	}
+
+	// complete
+	.complete {
+		padding-bottom: 100px;
+	}
+
+	// nav
+	.main_nav {
+		ul {
+			box-sizing: border-box;
+			padding: 0px 10%;
+			width: 100%;
+			li {
+				border: none;
+				&:last-of-type {
+					border-right: none;
+				}
+				&.link_now {
+					background: transparent;
+					border-bottom: 5px solid #BAE8E8;
+				}
+				&:hover {
+					background: #BAE8E8;
+				}
+				a {
+					font-size: 14px;
+					padding-bottom: 10px;
+					&[href="#contact"] {
+						font-size: inherit;
+					}
+				}
+			}
+		}
+	}
+
+}
