@@ -12,13 +12,17 @@ $stroke-color: #272343;
 $accent-color: #FFD803;
 $caution-color: #e53170;
 
+html {
+	font-size: 62.5%;
+}
+
 body {
 	background: $base-color;
 	box-sizing: border-box;
 	color: $font-color;
 	font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	font-size: 14px;
-	letter-spacing: 0.1em;
+	font-size: 1.4rem;
+	letter-spacing: 0.2em;
 	line-height: 1.5;
 	width: 100%;
 }
