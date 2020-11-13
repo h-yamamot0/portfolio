@@ -561,6 +561,7 @@ article > section {
 		.load_text {
 			color: $accent-color;
 			text-align: center;
+			white-space: nowrap;
 		}
 	}
 }
